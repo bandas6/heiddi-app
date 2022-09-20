@@ -1,0 +1,41 @@
+<app-header [title]="title"></app-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12" id="table-content">
+
+      <ion-grid fixed>
+        <ion-row class="content">
+
+          <ion-col *ngFor="let tittle of titlesTable" sizeLg="4" sizeMd="4" sizeXs="3">
+            <div class="tittleText">{{tittle}}</div>
+          </ion-col>
+
+        </ion-row>
+
+
+        <ion-row sizeXs="12" class="content-users" *ngFor="let user of users; let i" (click)="mostrarUsuario(user)" >
+          <ion-col col-3>
+            <div>{{user.nombre}}</div>
+          </ion-col>
+
+          <ion-col col-3>
+            <div>{{user.correo}}</div>
+          </ion-col>
+
+          <ion-col col-3>
+            <div>{{user.telefono}}</div>
+          </ion-col>
+
+          <ion-col col-3>
+            <div>{{user.ciudad}}</div>
+          </ion-col>
+        </ion-row>
+
+
+
+      </ion-grid>
+
+    </ion-col>
+  </ion-row>
+</ion-content>
