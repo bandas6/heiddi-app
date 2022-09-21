@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashComponent } from './dash.component';
 import { TableComponent } from './table/table.component';
 import { UserComponent } from './user/user.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path:'table',
         component:TableComponent
+      },
+      {
+        path:'form',
+        component:FormComponent
       },
       {
         path:'**',

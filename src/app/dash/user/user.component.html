@@ -1,16 +1,26 @@
 <ion-content>
 
   <ion-card>
-    <ion-card-header>
+
+    <ion-card-header *ngIf="mostrar" >
+      <h1>Informacion usuario</h1>
       <ion-card-subtitle>nombre</ion-card-subtitle>
-      <ion-card-title>{{user['nombre'] || 'Seleccione un elemento de la tabla'}}</ion-card-title>
+      <ion-card-title>{{user['nombre']}}</ion-card-title>
       <ion-card-subtitle>correo</ion-card-subtitle>
       <ion-card-title>{{user['correo']}}</ion-card-title>
       <ion-card-subtitle>telefono</ion-card-subtitle>
       <ion-card-title>{{user['telefono']}}</ion-card-title>
       <ion-card-subtitle>ciudad</ion-card-subtitle>
       <ion-card-title>{{user['ciudad']}}</ion-card-title>
+      <h1></h1>
     </ion-card-header>
+
+
+    <ion-card-header *ngIf="!mostrar" >
+       <ion-title>Seleccione una opcion en la ventana tabla</ion-title>
+    </ion-card-header>
+
+
 
 
   </ion-card>

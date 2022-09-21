@@ -10,17 +10,20 @@ import { User } from '../interfaces/dataInterface';
 export class UserComponent implements OnInit {
 
   user: User[] = [];
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  mostrar: Boolean = false;
 
   constructor(private dataService: DataService) {
-    this.dataService.user.subscribe( user => {
+    this.dataService.user.subscribe(user => {
+      if(user){
+        this.mostrar = true;
+      }
       this.user = user;
     });
-   }
+  }
 
   ngOnInit(): void {
   }
-
-
 
 
 

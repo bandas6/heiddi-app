@@ -29,4 +29,8 @@ export class DataService {
     .pipe(map( data =>data['users']));
   }
 
+  postData(user: User){
+    return this.http.post(this.url,user);
+  }
+
 }

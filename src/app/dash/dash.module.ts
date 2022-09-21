@@ -7,13 +7,16 @@ import { DashComponent } from './dash.component';
 import { IonicModule } from '@ionic/angular';
 import { ComponentsModule } from '../components/components.module';
 import { UserComponent } from './user/user.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     TableComponent,
     DashComponent,
-    UserComponent
+    UserComponent,
+    FormComponent
   ],
   exports:[
   ],
@@ -21,7 +24,8 @@ import { UserComponent } from './user/user.component';
     CommonModule,
     DashRoutingModule,
     IonicModule,
-    ComponentsModule
+    ComponentsModule,
+    ReactiveFormsModule
   ]
 })
 export class DashModule { }
